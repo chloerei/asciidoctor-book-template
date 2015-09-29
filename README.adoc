@@ -63,14 +63,16 @@ build
     `-- book-sample.mobi
 ----
 
-=== Rename
+=== Customize
 
-You can rename `book.adoc` and `book-sample.adoc` as you wish, then you must update `SOURCES` in `Rakefile`:
+==== Filename
+
+By default, there are two build source: `book.adoc` and `boo-sample.adoc`. It is suitable for separate formal and sample version. When source filename is `book.adoc`, build task will generate ebooks in `build/book` directory.
+
+You can change filename, add or remove source, then change `SOURCES` in Rakefile to change build source.
 
 .Rakefile
 [source,ruby]
 ----
 SOURCES = %w(book.adoc book-sample.adoc)
 ----
-
-You can add or remove `SOURCES` items.
