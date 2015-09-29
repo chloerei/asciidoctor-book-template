@@ -6,7 +6,7 @@ gem 'asciidoctor-epub3', '~> 1.5.0.alpha.4'
 gem 'kindlegen', '~> 2.9.5'
 
 # Code highlight
-gem 'rouge', '~> 1.9.1'
+gem 'coderay', '~> 1.1.0'
 
 # Rake
 gem 'rake', '~> 10.4.2'
