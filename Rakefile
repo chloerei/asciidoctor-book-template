@@ -12,7 +12,7 @@ task :build => [:clean] do
     doc = Asciidoctor.load_file source
     docname = doc.attributes['docname']
     version = doc.attributes['revnumber']
-    filename = [docname, version].join('-')
+    filename = [docname, version].compact.join('-')
     build_dir = "build/#{docname}"
 
     # Build html
