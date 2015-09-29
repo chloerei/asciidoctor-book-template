@@ -1,1 +1,76 @@
-== Readme
+== Asciidoctor Book Template
+
+A book template to generate html, pdf, epub, mobi format ebook by Asciidoctor.
+
+=== Usage
+
+Download this repo:
+
+[source,console]
+----
+$ git clone https://github.com/chloerei/asciidoctor-book-template.git bookname
+$ cd bookname
+----
+
+Install gems:
+
+[source,console]
+----
+$ bundle install
+----
+
+Download fonts for PDF generate (run once):
+
+[source,console]
+----
+$ asciidoctor-pdf-cjk-kai_gen_gothic-install
+----
+
+Build books:
+
+[source,console]
+----
+$ rake build
+----
+
+Result will be store in `build` dir:
+
+[source,console]
+----
+$ tree build
+build
+|-- book
+|   |-- book-0.1.0
+|   |   |-- images
+|   |   |   |-- cover.png
+|   |   |   `-- cover.svg
+|   |   `-- index.html
+|   |-- book-0.1.0.pdf
+|   |-- book-0.1.0.pdfmarks
+|   |-- book.epub
+|   |-- book-kf8.epub
+|   `-- book.mobi
+`-- book-sample
+    |-- book-sample-0.1.0
+    |   |-- images
+    |   |   |-- cover.png
+    |   |   `-- cover.svg
+    |   `-- index.html
+    |-- book-sample-0.1.0.pdf
+    |-- book-sample-0.1.0.pdfmarks
+    |-- book-sample.epub
+    |-- book-sample-kf8.epub
+    `-- book-sample.mobi
+----
+
+=== Rename
+
+You can rename `book.adoc` and `book-sample.adoc` as you wish, then you must update `SOURCES` in `Rakefile`:
+
+.Rakefile
+[source,ruby]
+----
+SOURCES = %w(book.adoc book-sample.adoc)
+----
+
+You can add or remove `SOURCES` items.
