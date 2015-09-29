@@ -1,5 +1,8 @@
 = Asciidoct Book Template
 Author Name <author@example.org>
 v0.1.0, 2015-04-01
+:doctype: book
+:imagesdir: images
+:front-cover-image: image:cover.png[Front Cover,1050,1600]
 
 include::README.adoc[]
