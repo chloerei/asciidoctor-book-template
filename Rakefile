@@ -24,9 +24,14 @@ task :build => [:clean] do
 
     # Build epub
     sh "bundle exec asciidoctor-epub3 -D #{build_dir} -o #{filename}.epub #{source}"
+    # Fix output name
+    mv "#{build_dir}/#{docname}.epub", "#{build_dir}/#{filename}.epub"
 
     # Build mobi
     sh "bundle exec asciidoctor-epub3 -D #{build_dir} -o #{filename}.mobi -a ebook-format=kf8 #{source}"
+    # Fix output name
+    mv "#{build_dir}/#{docname}-kf8.epub", "#{build_dir}/#{filename}-kf8.epub"
+    mv "#{build_dir}/#{docname}.mobi", "#{build_dir}/#{filename}.mobi"
   end
 end
 

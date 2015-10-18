@@ -38,29 +38,29 @@ Result will be store in `build` dir:
 [source,console]
 ----
 $ tree build
-build
+build/
 |-- book
 |   |-- book-0.1.0
 |   |   |-- images
 |   |   |   |-- cover.png
 |   |   |   `-- cover.svg
 |   |   `-- index.html
+|   |-- book-0.1.0.epub
+|   |-- book-0.1.0-kf8.epub
+|   |-- book-0.1.0.mobi
 |   |-- book-0.1.0.pdf
-|   |-- book-0.1.0.pdfmarks
-|   |-- book.epub
-|   |-- book-kf8.epub
-|   `-- book.mobi
+|   `-- book-0.1.0.pdfmarks
 `-- book-sample
     |-- book-sample-0.1.0
     |   |-- images
     |   |   |-- cover.png
     |   |   `-- cover.svg
     |   `-- index.html
+    |-- book-sample-0.1.0.epub
+    |-- book-sample-0.1.0-kf8.epub
+    |-- book-sample-0.1.0.mobi
     |-- book-sample-0.1.0.pdf
-    |-- book-sample-0.1.0.pdfmarks
-    |-- book-sample.epub
-    |-- book-sample-kf8.epub
-    `-- book-sample.mobi
+    `-- book-sample-0.1.0.pdfmarks
 ----
 
 === Customize
